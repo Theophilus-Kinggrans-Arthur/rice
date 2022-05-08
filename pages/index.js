@@ -5,7 +5,7 @@ import Featured from "../components/Featured";
 import RiceList from "../components/RiceList";
 import styles from "../styles/Home.module.css";
 
-export default function Home({ riceList }) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,16 +14,7 @@ export default function Home({ riceList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured />
-      <RiceList riceList={riceList} />
+      <RiceList />
     </div>
   );
 }
-
-export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api/products");
-  return {
-    props: {
-      riceList: res.data,
-    },
-  };
-};

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/RiceList.module.css";
 import RiceCard from "./RiceCard";
 
-const RiceList = ({ riceList }) => {
+const RiceList = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>BEST RICE SHOP IN TOWN</h1>
@@ -12,9 +12,14 @@ const RiceList = ({ riceList }) => {
         reiciendis aut sunt.
       </p>
       <div className={styles.wrapper}>
-        {riceList.map((rice) => (
-          <RiceCard key={rice.id} rice={rice} />
-        ))}
+        <RiceCard />
+        <RiceCard />
+        <RiceCard />
+        <RiceCard />
+        <RiceCard />
+        <RiceCard />
+        <RiceCard />
+        <RiceCard />
       </div>
     </div>
   );
